@@ -1,15 +1,26 @@
 extends Node
 
 
-@onready var player: CharacterBody3D = %Player
-@onready var cam_controller: Node3D = %CameraController
+var player: PlayerCharacter = null
+var cam_controller: CameraController = null
+var cam_owner: Node3D = null
 
 
 func _ready() -> void:
-	cam_controller.cam_owner = player
-	cam_controller.global_position = player.cam_anchor.global_position
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
-
-func _process(_delta: float) -> void:
 	pass
+	# Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("DEBUG_toggle_mouse_mode_captured"):
+		match Input.mouse_mode:
+			Input.MOUSE_MODE_CAPTURED:
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			Input.MOUSE_MODE_VISIBLE:
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func change_cam_ownership(new_owner: Node3D) -> void:
+	cam_owner = new_owner
+	cam_owner.cam_controller = cam_controller
+	cam_controller.cam_owner = cam_owner

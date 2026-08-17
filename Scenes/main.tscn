@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nuotttpvvre2"]
 
-[ext_resource type="Script" uid="uid://bs55h1ru0cp0" path="res://Scripts/main.gd" id="1_8gbba"]
+[ext_resource type="Script" uid="uid://bbpm0m2os6khe" path="res://Scripts/sun.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bqa2eno86cyx1" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://dttqyblo5jwn3" path="res://Scenes/camera_controller.tscn" id="3_jjvhh"]
 
@@ -53,14 +53,14 @@ albedo_color = Color(0.46342278, 0.16583392, 0.029325586, 1)
 albedo_color = Color(0.41960785, 1, 0.23137255, 1)
 
 [node name="Main" type="Node" unique_id=1172361711]
-script = ExtResource("1_8gbba")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2139371070]
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=2139371070]
 unique_name_in_owner = true
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
+script = ExtResource("1_8gbba")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1973510107]
+[node name="Atmosphere" type="WorldEnvironment" parent="." unique_id=1973510107]
 unique_name_in_owner = true
 environment = SubResource("Environment_8gbba")
 

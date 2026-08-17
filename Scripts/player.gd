@@ -1,3 +1,4 @@
+class_name PlayerCharacter
 extends CharacterBody3D
 
 
@@ -5,16 +6,18 @@ extends CharacterBody3D
 
 ## Movement Vars ##
 @export var ground_speed: float = 5.0
-@export var ground_accel: float = 2.0
-@export var air_speed: float = 2.0
-@export var air_accel: float = 1.0
+@export var ground_accel: float = 15.0
+@export var ground_deccel: float = 13.0
+@export var air_speed: float = 5.0
+@export var air_accel: float = 8.0
+@export var air_deccel: float = 1.0
 @export var turn_speed: float = 5.0
 @export var jump_velocity: float = 4.5
 
 ## Camera-related Vars ##
 @onready var cam_anchor: Marker3D = %CamAnchor
 var cam_transform_y: float = 0.0
-var current_cam_controller: CameraController = null
+var cam_controller: CameraController = null
 
 ## Simple State Machine Vars ##
 enum PLAYER_STATE {WALKING, JUMPING, FALLING, INTERACTING}
@@ -23,20 +26,26 @@ var current_state: PLAYER_STATE = PLAYER_STATE.WALKING
 #endregion
 
 
+func _ready() -> void:
+	Main.player = self
+	if Main.cam_controller and Main.player:
+		Main.change_cam_ownership(Main.player)
+
+
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("jump"):
+	if !cam_controller: return
+
+	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y += jump_velocity
 		_change_state(PLAYER_STATE.JUMPING)
 
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)
-	_process_state()
+	
+	if !cam_controller: return
 
-	# # Get the input direction and handle the movement/deceleration.
-	# # As good practice, you should replace UI actions with custom gameplay actions.
-	# var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
-	# var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	_process_state(delta)
 
 	move_and_slide()
 
@@ -46,18 +55,18 @@ func _apply_gravity(delta) -> void:
 		velocity += get_gravity() * delta
 
 
-func _process_state() -> void:
+func _process_state(delta: float) -> void:
 	match current_state:
 		PLAYER_STATE.WALKING:
-			_handle_ground_movement()
+			_handle_movement(delta)
 
 		PLAYER_STATE.JUMPING:
-			_handle_air_movement()
+			_handle_movement(delta)
 			if velocity.y <= 0.0:
 				_change_state(PLAYER_STATE.FALLING)
 
 		PLAYER_STATE.FALLING:
-			_handle_air_movement()
+			_handle_movement(delta)
 			if is_on_floor():
 				_change_state(PLAYER_STATE.WALKING)
 
@@ -69,32 +78,36 @@ func _change_state(new_state: PLAYER_STATE) -> void:
 	current_state = new_state
 
 
-func _handle_ground_movement() -> void:
-	pass
-
-
-func _handle_air_movement() -> void:
-	pass
-
-
-func _handle_movement() -> void:
+func _handle_movement(delta: float) -> void:
 	var movement_speed: float = 0.0
 	var movement_accel: float = 0.0
+	var movement_deccel: float = 0.0
 
 	match current_state:
 		PLAYER_STATE.WALKING:
 			movement_speed = ground_speed
 			movement_accel = ground_accel
-		PLAYER_STATE.JUMPING | PLAYER_STATE.FALLING:
+			movement_deccel = ground_deccel
+		PLAYER_STATE.JUMPING, PLAYER_STATE.FALLING:
 			movement_speed = air_speed
 			movement_accel = air_accel
+			movement_deccel = air_deccel
 	
-	# cam_transform_y is set from the camera_controller script
+	cam_transform_y = Main.cam_controller.yaw_controller.global_transform.basis.get_euler().y
 
+	var input: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var input_dir: Vector3 = Vector3(input.x, 0.0, input.y)
+	var forward_dir: Vector3 = input_dir.rotated(Vector3.UP, cam_transform_y).normalized()
+	var precalculated_velocity: Vector2 = Vector2(velocity.x, velocity.z)
 
-func attatch_camera_controller(new_camera_controller: CameraController) -> void:
-	current_cam_controller = new_camera_controller
-
-
-func detatch_camera_controller() -> void:
-	current_cam_controller = null
+	if forward_dir:
+		precalculated_velocity = precalculated_velocity.move_toward(Vector2(forward_dir.x, forward_dir.z) * movement_speed, movement_accel * delta)
+		velocity.x = precalculated_velocity.x
+		velocity.z = precalculated_velocity.y
+	else:
+		precalculated_velocity = precalculated_velocity.move_toward(Vector2.ZERO, movement_deccel * delta)
+		velocity.x = precalculated_velocity.x
+		velocity.z = precalculated_velocity.y
+	
+	if forward_dir != Vector3.ZERO:
+		rotation.y = lerp_angle(rotation.y, atan2(-forward_dir.x, -forward_dir.z), turn_speed * delta)
