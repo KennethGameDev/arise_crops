@@ -158,7 +158,7 @@ operation = 2
 size = Vector3(1328.6008, 1023.76355, 1388.3953)
 
 [node name="Hill09" type="CSGSphere3D" parent="World/Hills" unique_id=1974982056]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1394.5608, -368.36487, -2367.605)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1496.0642, -368.365, -2671.3867)
 use_collision = true
 radius = 643.54736
 radial_segments = 18
@@ -171,7 +171,7 @@ operation = 2
 size = Vector3(1328.6008, 1023.76355, 1388.3953)
 
 [node name="Hill10" type="CSGSphere3D" parent="World/Hills" unique_id=631005853]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1092.5977, -368.36487, -1303.8616)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1194.1011, -368.365, -1607.6432)
 use_collision = true
 radius = 643.54736
 radial_segments = 18
@@ -184,7 +184,7 @@ operation = 2
 size = Vector3(1328.6008, 1023.76355, 1388.3953)
 
 [node name="Hill11" type="CSGSphere3D" parent="World/Hills" unique_id=200218646]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -975.0656, -368.3651, -1854.407)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1076.5691, -368.36523, -2158.1885)
 use_collision = true
 radius = 643.54736
 radial_segments = 18
@@ -197,7 +197,7 @@ operation = 2
 size = Vector3(1328.6008, 1023.76355, 1388.3953)
 
 [node name="Hill12" type="CSGSphere3D" parent="World/Hills" unique_id=1112690768]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -675.5956, -368.36487, -2397.6958)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -777.099, -368.365, -2701.4775)
 use_collision = true
 radius = 643.54736
 radial_segments = 18
@@ -418,7 +418,7 @@ operation = 2
 size = Vector3(1328.6008, 1023.76355, 1388.3953)
 
 [node name="Hill29" type="CSGSphere3D" parent="World/Hills" unique_id=326540284]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1702.0962, -368.36475, -1711.3624)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1803.5996, -368.36487, -2015.144)
 use_collision = true
 radius = 643.54736
 radial_segments = 18
