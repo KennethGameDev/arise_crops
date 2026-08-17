@@ -37,6 +37,21 @@ roughness_texture = SubResource("NoiseTexture2D_11hut")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7u77a"]
 albedo_color = Color(0.26380098, 0.42978108, 1, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrm4b"]
+albedo_color = Color(1, 0.6431373, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2le6s"]
+albedo_color = Color(1, 1, 0.6627451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tftnk"]
+albedo_color = Color(0.30980393, 0.58431375, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpmfm"]
+albedo_color = Color(0.46342278, 0.16583392, 0.029325586, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bi1kd"]
+albedo_color = Color(0.41960785, 1, 0.23137255, 1)
+
 [node name="Main" type="Node" unique_id=1172361711]
 script = ExtResource("1_8gbba")
 
@@ -543,6 +558,65 @@ material = SubResource("StandardMaterial3D_7u77a")
 
 [node name="PlayerHouse" type="Node3D" parent="World" unique_id=1372651962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23556447, 275.26962, 2.6184509)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World/PlayerHouse" unique_id=1453778296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.882792, 1.7884521, 2.041179)
+size = Vector3(4.9433594, 5.1987915, 6.072754)
+material = SubResource("StandardMaterial3D_nrm4b")
+
+[node name="CSGPolygon3DRoof" type="CSGPolygon3D" parent="World/PlayerHouse/CSGBox3D" unique_id=47110744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.57140756, 2.572235, 3.0370255)
+polygon = PackedVector2Array(0.4419849, 2.1737366, -1.8503745, 0.012817383, 3.0705752, -0.096710205)
+depth = 6.1
+material = SubResource("StandardMaterial3D_nrm4b")
+
+[node name="CSGBox3Dint" type="CSGBox3D" parent="World/PlayerHouse/CSGBox3D" unique_id=1481911366]
+transform = Transform3D(0.88, 0, 0, 0, 0.88, 0, 0, 0, 0.88, 0, 0, 0)
+operation = 2
+size = Vector3(4.9433594, 5.1987915, 6.072754)
+material = SubResource("StandardMaterial3D_2le6s")
+
+[node name="CSGBox3DDoor" type="CSGBox3D" parent="World/PlayerHouse/CSGBox3D" unique_id=251507222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2444775, -0.92041016, -2.8509169)
+operation = 2
+size = Vector3(1.3831787, 2.5234985, 0.86724854)
+material = SubResource("StandardMaterial3D_2le6s")
+
+[node name="CSGBox3DWindow" type="CSGBox3D" parent="World/PlayerHouse/CSGBox3D" unique_id=1687471952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7382302, -0.5646057, -2.8387203)
+operation = 2
+size = Vector3(1, 0.93652344, 0.8725586)
+material = SubResource("StandardMaterial3D_2le6s")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="World/PlayerHouse" unique_id=5694048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8433533, -0.37768555, 3.207916)
+size = Vector3(3.131897, 0.2446289, 1.6583252)
+material = SubResource("StandardMaterial3D_tftnk")
+
+[node name="Trees" type="Node3D" parent="World" unique_id=487837368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.702728, 273.34863, 6.2445555)
+
+[node name="Tree" type="CSGCylinder3D" parent="World/Trees" unique_id=251897642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6342773, 0)
+radius = 0.48486328
+height = 10.194702
+material = SubResource("StandardMaterial3D_bpmfm")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="World/Trees/Tree" unique_id=494542999]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4081116, 0)
+radius = 1.4600394
+material = SubResource("StandardMaterial3D_bi1kd")
+
+[node name="Tree2" type="CSGCylinder3D" parent="World/Trees" unique_id=1406688077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.954646, 3.0243225, 0.02879715)
+radius = 0.48486328
+height = 10.194702
+material = SubResource("StandardMaterial3D_bpmfm")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="World/Trees/Tree2" unique_id=1126544297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4081116, 0)
+radius = 1.4600394
+material = SubResource("StandardMaterial3D_bi1kd")
 
 [node name="CameraController" parent="." unique_id=866665694 instance=ExtResource("3_jjvhh")]
 unique_name_in_owner = true
