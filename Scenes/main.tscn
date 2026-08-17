@@ -1,0 +1,552 @@
+[gd_scene format=3 uid="uid://nuotttpvvre2"]
+
+[ext_resource type="Script" uid="uid://bs55h1ru0cp0" path="res://Scripts/main.gd" id="1_8gbba"]
+[ext_resource type="PackedScene" uid="uid://bqa2eno86cyx1" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://dttqyblo5jwn3" path="res://Scenes/camera_controller.tscn" id="3_jjvhh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjgbg"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_bo1nx"]
+sky_material = SubResource("ProceduralSkyMaterial_jjgbg")
+
+[sub_resource type="Environment" id="Environment_8gbba"]
+background_mode = 2
+sky = SubResource("Sky_bo1nx")
+glow_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_vcxdi"]
+offsets = PackedFloat32Array(0, 0.53333336)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pcya0"]
+noise_type = 3
+seed = 13
+frequency = 0.06
+fractal_lacunarity = 2.96
+fractal_gain = 1.115
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_11hut"]
+noise = SubResource("FastNoiseLite_pcya0")
+color_ramp = SubResource("Gradient_vcxdi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11hut"]
+albedo_color = Color(0.0046427883, 0.5404916, 4.813075e-07, 1)
+roughness_texture = SubResource("NoiseTexture2D_11hut")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7u77a"]
+albedo_color = Color(0.26380098, 0.42978108, 1, 1)
+
+[node name="Main" type="Node" unique_id=1172361711]
+script = ExtResource("1_8gbba")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2139371070]
+unique_name_in_owner = true
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1973510107]
+unique_name_in_owner = true
+environment = SubResource("Environment_8gbba")
+
+[node name="World" type="Node3D" parent="." unique_id=477775614]
+
+[node name="Hills" type="Node3D" parent="World" unique_id=1524361455]
+
+[node name="Hill01" type="CSGSphere3D" parent="World/Hills" unique_id=813494524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -368.36487, 0)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill01" unique_id=1322109384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill02" type="CSGSphere3D" parent="World/Hills" unique_id=1707482440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.367065, -368.36487, -505.52753)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill02" unique_id=151732041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill03" type="CSGSphere3D" parent="World/Hills" unique_id=1927717955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 333.85852, -368.36487, -395.29114)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill03" unique_id=275699028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill04" type="CSGSphere3D" parent="World/Hills" unique_id=1508851984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -478.67395, -368.36487, -78.99005)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill04" unique_id=1781344205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill05" type="CSGSphere3D" parent="World/Hills" unique_id=1009988597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 399.0412, -368.36487, 408.97626)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill05" unique_id=1021499758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill06" type="CSGSphere3D" parent="World/Hills" unique_id=1296285489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 803.0529, -419.411, -6.85968)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill06" unique_id=165984406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill07" type="CSGSphere3D" parent="World/Hills" unique_id=1427072024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -265.1778, -368.3651, 618.6906)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill07" unique_id=874339720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill08" type="CSGSphere3D" parent="World/Hills" unique_id=1902403802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 280.35944, -394.91663, -1005.7828)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill08" unique_id=2097804327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill09" type="CSGSphere3D" parent="World/Hills" unique_id=1974982056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1394.5608, -368.36487, -2367.605)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill09" unique_id=1911771489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill10" type="CSGSphere3D" parent="World/Hills" unique_id=631005853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1092.5977, -368.36487, -1303.8616)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill10" unique_id=1220124041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill11" type="CSGSphere3D" parent="World/Hills" unique_id=200218646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -975.0656, -368.3651, -1854.407)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill11" unique_id=697150994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill12" type="CSGSphere3D" parent="World/Hills" unique_id=1112690768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -675.5956, -368.36487, -2397.6958)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill12" unique_id=1972673441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill13" type="CSGSphere3D" parent="World/Hills" unique_id=917068596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2304.3674, -368.36487, 416.96588)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill13" unique_id=670807434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill14" type="CSGSphere3D" parent="World/Hills" unique_id=1392035953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2788.7966, -368.365, -199.74481)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill14" unique_id=1757682439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill15" type="CSGSphere3D" parent="World/Hills" unique_id=319408185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2020.3567, -368.365, 802.32306)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill15" unique_id=794022402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill16" type="CSGSphere3D" parent="World/Hills" unique_id=1132302807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2445.563, -368.365, 243.1261)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill16" unique_id=543149744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill17" type="CSGSphere3D" parent="World/Hills" unique_id=374458112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1017.5417, -368.36487, -2936.3733)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill17" unique_id=1136602530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill18" type="CSGSphere3D" parent="World/Hills" unique_id=848615326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1820.6235, -368.36475, -2682.9084)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill18" unique_id=1121762080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill19" type="CSGSphere3D" parent="World/Hills" unique_id=1653998837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1381.9565, -368.3651, -2361.7327)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill19" unique_id=2119966127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill20" type="CSGSphere3D" parent="World/Hills" unique_id=673897480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2254.2393, -368.365, -2099.9526)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill20" unique_id=1436143494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill21" type="CSGSphere3D" parent="World/Hills" unique_id=763765763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2566.5977, -368.36487, 736.47003)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill21" unique_id=1368631399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill22" type="CSGSphere3D" parent="World/Hills" unique_id=2090944730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2433.7178, -368.3651, 1683.6086)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill22" unique_id=1985940121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill23" type="CSGSphere3D" parent="World/Hills" unique_id=863834061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2677.1406, -368.36487, -2763.6758)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill23" unique_id=2079063164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill24" type="CSGSphere3D" parent="World/Hills" unique_id=1207273964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3057.3826, -368.36487, 434.92072)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill24" unique_id=1755925541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill25" type="CSGSphere3D" parent="World/Hills" unique_id=1887659177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2745.183, -368.365, 1220.6038)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill25" unique_id=1101658065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill26" type="CSGSphere3D" parent="World/Hills" unique_id=215504082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -970.37573, -368.365, 2587.7332)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill26" unique_id=1197642583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill27" type="CSGSphere3D" parent="World/Hills" unique_id=76169538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -518.77905, -368.36475, 2308.1118)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill27" unique_id=1315915499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill28" type="CSGSphere3D" parent="World/Hills" unique_id=1647764293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -398.1148, -368.36487, 2974.8123)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill28" unique_id=307280211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill29" type="CSGSphere3D" parent="World/Hills" unique_id=326540284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1702.0962, -368.36475, -1711.3624)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill29" unique_id=557961622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill30" type="CSGSphere3D" parent="World/Hills" unique_id=1203922790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3511.983, -368.3651, 1139.0154)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill30" unique_id=1846186728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill31" type="CSGSphere3D" parent="World/Hills" unique_id=1506845071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1378.4927, -368.365, 2935.2798)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill31" unique_id=2134545714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill32" type="CSGSphere3D" parent="World/Hills" unique_id=1788161114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1576.0803, -368.365, 2323.1504)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill32" unique_id=88797229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill33" type="CSGSphere3D" parent="World/Hills" unique_id=1550884298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2077.2312, -368.365, 2865.985)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill33" unique_id=1220925609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Hill34" type="CSGSphere3D" parent="World/Hills" unique_id=335210755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1790.8677, -368.365, 3632.6628)
+use_collision = true
+radius = 643.54736
+radial_segments = 18
+rings = 13
+material = SubResource("StandardMaterial3D_11hut")
+
+[node name="CSGBox3DSub" type="CSGBox3D" parent="World/Hills/Hill34" unique_id=2045112508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80896, -159.89478, 15.036926)
+operation = 2
+size = Vector3(1328.6008, 1023.76355, 1388.3953)
+
+[node name="Ocean" type="Node3D" parent="World" unique_id=1906758018]
+
+[node name="OceanTile01" type="CSGBox3D" parent="World/Ocean" unique_id=1722732890]
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="OceanTile02" type="CSGBox3D" parent="World/Ocean" unique_id=344169979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5000, 0, 0)
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="OceanTile03" type="CSGBox3D" parent="World/Ocean" unique_id=1732455650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5000, 0, -5000)
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="OceanTile04" type="CSGBox3D" parent="World/Ocean" unique_id=1790191692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5000, 0, 0)
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="OceanTile05" type="CSGBox3D" parent="World/Ocean" unique_id=1895183269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5000, 0, 5000)
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="OceanTile06" type="CSGBox3D" parent="World/Ocean" unique_id=1582543399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5000)
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="OceanTile07" type="CSGBox3D" parent="World/Ocean" unique_id=1836186703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5000, 0, -5000)
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="OceanTile08" type="CSGBox3D" parent="World/Ocean" unique_id=945218286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5000)
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="OceanTile09" type="CSGBox3D" parent="World/Ocean" unique_id=534505118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5000, 0, 5000)
+size = Vector3(5000, 0.5, 5000)
+material = SubResource("StandardMaterial3D_7u77a")
+
+[node name="PlayerHouse" type="Node3D" parent="World" unique_id=1372651962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23556447, 275.26962, 2.6184509)
+
+[node name="CameraController" parent="." unique_id=866665694 instance=ExtResource("3_jjvhh")]
+unique_name_in_owner = true
+
+[node name="Player" parent="." unique_id=1153890603 instance=ExtResource("1_jjgbg")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 275.15887, 0)

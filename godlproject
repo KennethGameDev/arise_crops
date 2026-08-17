@@ -1,0 +1,9 @@
+description=Crop Growing game for Novice Summer Game Jam series. Prompt: "Rising up"
+icon=icon.svg
+name=arise_crops
+tags=
+
+[version]
+isMono=false
+repo=/godotengine/godot-builds
+tagName=4.7.1-stable

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dttqyblo5jwn3"]
+
+[ext_resource type="Script" uid="uid://wd3s3ndhtj2s" path="res://Scripts/camera_controller.gd" id="1_wovnw"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_v0iea"]
+margin = 0.2
+length = 0.5
+
+[node name="CameraController" type="Node3D" unique_id=866665694]
+script = ExtResource("1_wovnw")
+
+[node name="YawController" type="Node3D" parent="." unique_id=1625835569]
+unique_name_in_owner = true
+
+[node name="PitchController" type="Node3D" parent="YawController" unique_id=1286514001]
+unique_name_in_owner = true
+
+[node name="SpringArm3D" type="SpringArm3D" parent="YawController/PitchController" unique_id=1490923219]
+unique_name_in_owner = true
+shape = SubResource("SeparationRayShape3D_v0iea")
+spring_length = 3.0
+margin = 0.2
+
+[node name="Camera3D" type="Camera3D" parent="YawController/PitchController/SpringArm3D" unique_id=30844720]
+unique_name_in_owner = true
