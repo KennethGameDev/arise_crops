@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bei20av02f4xj" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="PackedScene" uid="uid://dp68cxv2l36ym" path="res://Assets/Player/Joel_guy_mesh.fbx" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://8f8822iw6yrc" path="res://Scripts/game_clock.gd" id="3_6t5aa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_11hut"]
 radius = 0.4111328
 height = 1.8618164
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11hut"]
+bg_color = Color(0.11858138, 0.11858138, 0.11858138, 0.57254905)
 
 [node name="Player" type="CharacterBody3D" unique_id=1153890603]
 script = ExtResource("1_cvnsp")
@@ -20,3 +24,20 @@ unique_name_in_owner = true
 [node name="CamAnchor" type="Marker3D" parent="." unique_id=988169698]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.741, 0)
+
+[node name="Control" type="Control" parent="." unique_id=1467019732]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_6t5aa")
+
+[node name="Label" type="Label" parent="Control" unique_id=981281652]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_11hut")
+text = "00:00"

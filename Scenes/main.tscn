@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bbpm0m2os6khe" path="res://Scripts/sun.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bqa2eno86cyx1" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://bu8wdaqh04i6u" path="res://Scripts/atmosphere.gd" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://dttqyblo5jwn3" path="res://Scenes/camera_controller.tscn" id="3_jjvhh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjgbg"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(1.1936426e-05, 0.73931277, 0.98726255, 1)
+sky_horizon_color = Color(0.81960785, 0.5921569, 0.69411767, 1)
+ground_bottom_color = Color(0.17452097, 0.3177343, 0.9999909, 1)
+ground_horizon_color = Color(0.81960785, 0.5921569, 0.69411767, 1)
 
 [sub_resource type="Sky" id="Sky_bo1nx"]
 sky_material = SubResource("ProceduralSkyMaterial_jjgbg")
@@ -14,6 +17,7 @@ sky_material = SubResource("ProceduralSkyMaterial_jjgbg")
 [sub_resource type="Environment" id="Environment_8gbba"]
 background_mode = 2
 sky = SubResource("Sky_bo1nx")
+ambient_light_source = 3
 glow_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_vcxdi"]
@@ -35,7 +39,7 @@ albedo_color = Color(0.0046427883, 0.5404916, 4.813075e-07, 1)
 roughness_texture = SubResource("NoiseTexture2D_11hut")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7u77a"]
-albedo_color = Color(0.26380098, 0.42978108, 1, 1)
+albedo_color = Color(0.2627451, 0.43137255, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrm4b"]
 albedo_color = Color(1, 0.6431373, 1, 1)
@@ -56,7 +60,7 @@ albedo_color = Color(0.41960785, 1, 0.23137255, 1)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2139371070]
 unique_name_in_owner = true
-transform = Transform3D(-0.8660254, 0.027934566, 0.49921918, 0, 0.9984382, -0.055869073, -0.5000001, -0.048384085, -0.86467266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.286073, 0.410076, 0, 0.820152, 0.5721459, -0.50000006, 0.4954929, -0.7102723, 0, 0, 0)
 shadow_enabled = true
 directional_shadow_split_1 = 0.005
 directional_shadow_split_2 = 0.008
@@ -68,6 +72,7 @@ script = ExtResource("1_8gbba")
 [node name="Atmosphere" type="WorldEnvironment" parent="." unique_id=1973510107]
 unique_name_in_owner = true
 environment = SubResource("Environment_8gbba")
+script = ExtResource("2_jjvhh")
 
 [node name="World" type="Node3D" parent="." unique_id=477775614]
 
@@ -602,7 +607,7 @@ material = SubResource("StandardMaterial3D_tftnk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.702728, 273.34863, 6.2445555)
 
 [node name="Tree" type="CSGCylinder3D" parent="World/Trees" unique_id=251897642]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6342773, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6342773, 5.0886555)
 radius = 0.48486328
 height = 10.194702
 material = SubResource("StandardMaterial3D_bpmfm")
@@ -612,13 +617,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4081116, 0)
 radius = 1.4600394
 material = SubResource("StandardMaterial3D_bi1kd")
 
-[node name="Tree2" type="CSGCylinder3D" parent="World/Trees" unique_id=1406688077]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.954646, 3.0243225, 0.02879715)
+[node name="Tree4" type="CSGCylinder3D" parent="World/Trees" unique_id=392087249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4652405, 2.6342773, 5.0886555)
 radius = 0.48486328
 height = 10.194702
 material = SubResource("StandardMaterial3D_bpmfm")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="World/Trees/Tree2" unique_id=1126544297]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="World/Trees/Tree4" unique_id=214633205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4081116, 0)
 radius = 1.4600394
 material = SubResource("StandardMaterial3D_bi1kd")
