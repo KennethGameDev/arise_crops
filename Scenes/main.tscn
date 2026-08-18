@@ -56,8 +56,13 @@ albedo_color = Color(0.41960785, 1, 0.23137255, 1)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=2139371070]
 unique_name_in_owner = true
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, 0.027934566, 0.49921918, 0, 0.9984382, -0.055869073, -0.5000001, -0.048384085, -0.86467266, 0, 0, 0)
 shadow_enabled = true
+directional_shadow_split_1 = 0.005
+directional_shadow_split_2 = 0.008
+directional_shadow_split_3 = 0.128
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 8192.0
 script = ExtResource("1_8gbba")
 
 [node name="Atmosphere" type="WorldEnvironment" parent="." unique_id=1973510107]
