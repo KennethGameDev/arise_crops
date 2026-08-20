@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cj0nkwob7op3u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tftnk"]
+albedo_color = Color(0.30980393, 0.58431375, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pcya0"]
+size = Vector3(3.125, 1.9290771, 1.6328125)
+
+[node name="PlayerBed" type="CSGBox3D" unique_id=1994648301]
+use_collision = true
+size = Vector3(3.131897, 0.2446289, 1.6583252)
+material = SubResource("StandardMaterial3D_tftnk")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=420362519]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=190907005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.878847, 0)
+shape = SubResource("BoxShape3D_pcya0")

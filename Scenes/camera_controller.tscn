@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://dttqyblo5jwn3"]
 
 [ext_resource type="Script" uid="uid://wd3s3ndhtj2s" path="res://Scripts/camera_controller.gd" id="1_wovnw"]
+[ext_resource type="Script" uid="uid://8f8822iw6yrc" path="res://Scripts/game_clock.gd" id="2_vx6fv"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_v0iea"]
 margin = 0.2
 length = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jch55"]
+bg_color = Color(0.11858138, 0.11858138, 0.11858138, 0.57254905)
 
 [node name="CameraController" type="Node3D" unique_id=866665694]
 script = ExtResource("1_wovnw")
@@ -23,3 +27,38 @@ margin = 0.2
 
 [node name="Camera3D" type="Camera3D" parent="YawController/PitchController/SpringArm3D" unique_id=30844720]
 unique_name_in_owner = true
+
+[node name="UI" type="Control" parent="." unique_id=243028931]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_vx6fv")
+
+[node name="Clock" type="Label" parent="UI" unique_id=1769175197]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_jch55")
+text = "00:00"
+
+[node name="DayProgress" type="ProgressBar" parent="UI" unique_id=1257383553]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 47.000015
+grow_horizontal = 2
+max_value = 1.0
+step = 0.0
+show_percentage = false

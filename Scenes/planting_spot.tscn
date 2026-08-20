@@ -1,0 +1,274 @@
+[gd_scene format=3 uid="uid://c2xix52kisufx"]
+
+[ext_resource type="Script" uid="uid://dc75m7vrf6ywo" path="res://Scenes/planting_spot.gd" id="1_lg652"]
+
+[sub_resource type="Gradient" id="Gradient_rhlvc"]
+offsets = PackedFloat32Array(0, 0.53333336)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_lg652"]
+noise_type = 3
+seed = 13
+frequency = 0.06
+fractal_lacunarity = 2.96
+fractal_gain = 1.115
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_occat"]
+noise = SubResource("FastNoiseLite_lg652")
+color_ramp = SubResource("Gradient_rhlvc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ol60w"]
+albedo_color = Color(0.3, 0.24985002, 0.12300001, 1)
+roughness_texture = SubResource("NoiseTexture2D_occat")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lkav"]
+albedo_color = Color(0.3, 0.24985002, 0.12300001, 1)
+roughness_texture = SubResource("NoiseTexture2D_occat")
+
+[node name="PlantingSpot" type="Node3D" unique_id=1535176934]
+script = ExtResource("1_lg652")
+
+[node name="SmallDirtPile" type="CSGSphere3D" parent="." unique_id=737698451]
+transform = Transform3D(0.7678806, -0.48715758, 0.4159768, 0.02922947, -0.62204057, -0.7824392, 0.63992566, 0.6129787, -0.46341363, 0.46638107, -0.12841797, -0.3276086)
+use_collision = true
+material = SubResource("StandardMaterial3D_ol60w")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SmallDirtPile" unique_id=873528492]
+transform = Transform3D(0.95374274, 0.25592068, 0.157732, -0.19358093, 0.9242454, -0.32908443, -0.23000263, 0.28332806, 0.93103385, -0.7336416, 0, 0)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="SmallDirtPile" unique_id=311011199]
+transform = Transform3D(0.7235905, -0.6719652, 0.15773197, 0.6801025, 0.65510595, -0.32908443, 0.1178021, 0.34539637, 0.93103385, -0.45306537, -0.52601355, -0.12073496)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="SmallDirtPile" unique_id=887434897]
+transform = Transform3D(-0.09107135, -0.6670686, -0.73940873, 0.15165114, 0.7245442, -0.6723373, 0.98422956, -0.17336267, 0.035176337, 0.16102864, -0.1186641, -0.74123275)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="SmallDirtPile" unique_id=303404070]
+transform = Transform3D(0.14057952, -0.78008515, 0.60967565, -0.9058632, 0.14717048, 0.39718118, -0.3995614, -0.6081181, -0.6859614, 0.07762156, -0.610569, -0.30283487)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="SmallDirtPile" unique_id=1236647451]
+transform = Transform3D(0.9244264, -0.16083929, -0.34578395, -0.10209656, 0.76923746, -0.6307532, 0.36743987, 0.6183884, 0.6946825, 0.6395979, -0.14407349, -0.11580658)
+operation = 2
+size = Vector3(0.69140625, 1.859375, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="SmallDirtPile" unique_id=1216463020]
+transform = Transform3D(0.11378765, -0.9313892, -0.34578395, 0.70669985, 0.32050824, -0.6307533, 0.69830334, -0.17259341, 0.6946825, 0.0228042, 0.20364378, 0.22175026)
+operation = 2
+size = Vector3(0.69140625, 1, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="SmallDirtPile2" type="CSGSphere3D" parent="." unique_id=1575977464]
+transform = Transform3D(-0.955954, 0.21131647, -0.20370848, 0.029229496, -0.6220406, -0.7824393, -0.29205737, -0.7539302, 0.5884657, 0.057624817, -0.12841797, -0.40579987)
+use_collision = true
+material = SubResource("StandardMaterial3D_ol60w")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SmallDirtPile2" unique_id=831436996]
+transform = Transform3D(0.95374274, 0.25592068, 0.157732, -0.19358093, 0.9242454, -0.32908443, -0.23000263, 0.28332806, 0.93103385, -0.7336416, 0, 0)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="SmallDirtPile2" unique_id=2126653546]
+transform = Transform3D(0.7235905, -0.6719652, 0.15773197, 0.6801025, 0.65510595, -0.32908443, 0.1178021, 0.34539637, 0.93103385, -0.45306537, -0.52601355, -0.12073496)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="SmallDirtPile2" unique_id=1498460768]
+transform = Transform3D(-0.09107135, -0.6670686, -0.73940873, 0.15165114, 0.7245442, -0.6723373, 0.98422956, -0.17336267, 0.035176337, 0.16102864, -0.1186641, -0.74123275)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="SmallDirtPile2" unique_id=628543126]
+transform = Transform3D(0.14057952, -0.78008515, 0.60967565, -0.9058632, 0.14717048, 0.39718118, -0.3995614, -0.6081181, -0.6859614, 0.07762156, -0.610569, -0.30283487)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="SmallDirtPile2" unique_id=1525767358]
+transform = Transform3D(0.9244264, -0.16083929, -0.34578395, -0.10209656, 0.76923746, -0.6307532, 0.36743987, 0.6183884, 0.6946825, 0.6395979, -0.14407349, -0.11580658)
+operation = 2
+size = Vector3(0.69140625, 1.859375, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="SmallDirtPile2" unique_id=901524249]
+transform = Transform3D(0.11378765, -0.9313892, -0.34578395, 0.70669985, 0.32050824, -0.6307533, 0.69830334, -0.17259341, 0.6946825, 0.0228042, 0.20364378, 0.22175026)
+operation = 2
+size = Vector3(0.69140625, 1, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="SmallDirtPile3" type="CSGSphere3D" parent="." unique_id=2043815664]
+transform = Transform3D(-0.6205622, 0.6023604, -0.50206006, 0.02922949, -0.6220407, -0.7824394, -0.78361225, -0.50022733, 0.36840844, -0.4870577, -0.12841797, -0.35039234)
+use_collision = true
+material = SubResource("StandardMaterial3D_ol60w")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SmallDirtPile3" unique_id=344923908]
+transform = Transform3D(0.95374274, 0.25592068, 0.157732, -0.19358093, 0.9242454, -0.32908443, -0.23000263, 0.28332806, 0.93103385, -0.7336416, 0, 0)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="SmallDirtPile3" unique_id=711879596]
+transform = Transform3D(0.7235905, -0.6719652, 0.15773197, 0.6801025, 0.65510595, -0.32908443, 0.1178021, 0.34539637, 0.93103385, -0.45306537, -0.52601355, -0.12073496)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="SmallDirtPile3" unique_id=23310865]
+transform = Transform3D(-0.09107135, -0.6670686, -0.73940873, 0.15165114, 0.7245442, -0.6723373, 0.98422956, -0.17336267, 0.035176337, 0.16102864, -0.1186641, -0.74123275)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="SmallDirtPile3" unique_id=1822133381]
+transform = Transform3D(0.14057952, -0.78008515, 0.60967565, -0.9058632, 0.14717048, 0.39718118, -0.3995614, -0.6081181, -0.6859614, 0.07762156, -0.610569, -0.30283487)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="SmallDirtPile3" unique_id=574538329]
+transform = Transform3D(0.9244264, -0.16083929, -0.34578395, -0.10209656, 0.76923746, -0.6307532, 0.36743987, 0.6183884, 0.6946825, 0.6395979, -0.14407349, -0.11580658)
+operation = 2
+size = Vector3(0.69140625, 1.859375, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="SmallDirtPile3" unique_id=661615169]
+transform = Transform3D(0.11378765, -0.9313892, -0.34578395, 0.70669985, 0.32050824, -0.6307533, 0.69830334, -0.17259341, 0.6946825, 0.0228042, 0.20364378, 0.22175026)
+operation = 2
+size = Vector3(0.69140625, 1, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="SmallDirtPile4" type="CSGSphere3D" parent="." unique_id=1801366036]
+transform = Transform3D(-0.60276026, -0.513528, 0.6107124, -0.27672818, -0.5833383, -0.76363504, 0.7483995, -0.62928975, 0.20950529, -0.5007982, -0.12841797, 0.25422764)
+use_collision = true
+material = SubResource("StandardMaterial3D_ol60w")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SmallDirtPile4" unique_id=1319648245]
+transform = Transform3D(0.95374274, 0.25592068, 0.157732, -0.19358093, 0.9242454, -0.32908443, -0.23000263, 0.28332806, 0.93103385, -0.7336416, 0, 0)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="SmallDirtPile4" unique_id=1317343376]
+transform = Transform3D(0.7235905, -0.6719652, 0.15773197, 0.6801025, 0.65510595, -0.32908443, 0.1178021, 0.34539637, 0.93103385, -0.45306537, -0.52601355, -0.12073496)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="SmallDirtPile4" unique_id=976124991]
+transform = Transform3D(-0.09107135, -0.6670686, -0.73940873, 0.15165114, 0.7245442, -0.6723373, 0.98422956, -0.17336267, 0.035176337, 0.16102864, -0.1186641, -0.74123275)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="SmallDirtPile4" unique_id=1349023584]
+transform = Transform3D(0.14057952, -0.78008515, 0.60967565, -0.9058632, 0.14717048, 0.39718118, -0.3995614, -0.6081181, -0.6859614, 0.07762156, -0.610569, -0.30283487)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="SmallDirtPile4" unique_id=722739151]
+transform = Transform3D(0.9244264, -0.16083929, -0.34578395, -0.10209656, 0.76923746, -0.6307532, 0.36743987, 0.6183884, 0.6946825, 0.6395979, -0.14407349, -0.11580658)
+operation = 2
+size = Vector3(0.69140625, 1.859375, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="SmallDirtPile4" unique_id=286357501]
+transform = Transform3D(0.11378765, -0.9313892, -0.34578395, 0.70669985, 0.32050824, -0.6307533, 0.69830334, -0.17259341, 0.6946825, 0.0228042, 0.20364378, 0.22175026)
+operation = 2
+size = Vector3(0.69140625, 1, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="SmallDirtPile5" type="CSGSphere3D" parent="." unique_id=160729128]
+transform = Transform3D(0.47987396, -0.77237713, 0.41611838, -0.27672818, -0.58333826, -0.7636349, 0.83255196, 0.2512969, -0.4936676, 0.04234028, -0.12841797, 0.38095284)
+use_collision = true
+material = SubResource("StandardMaterial3D_ol60w")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SmallDirtPile5" unique_id=126358554]
+transform = Transform3D(0.95374274, 0.25592068, 0.157732, -0.19358093, 0.9242454, -0.32908443, -0.23000263, 0.28332806, 0.93103385, -0.7336416, 0, 0)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="SmallDirtPile5" unique_id=2139630394]
+transform = Transform3D(0.7235905, -0.6719652, 0.15773197, 0.6801025, 0.65510595, -0.32908443, 0.1178021, 0.34539637, 0.93103385, -0.45306537, -0.52601355, -0.12073496)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="SmallDirtPile5" unique_id=917954971]
+transform = Transform3D(-0.09107135, -0.6670686, -0.73940873, 0.15165114, 0.7245442, -0.6723373, 0.98422956, -0.17336267, 0.035176337, 0.16102864, -0.1186641, -0.74123275)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="SmallDirtPile5" unique_id=233590863]
+transform = Transform3D(0.14057952, -0.78008515, 0.60967565, -0.9058632, 0.14717048, 0.39718118, -0.3995614, -0.6081181, -0.6859614, 0.07762156, -0.610569, -0.30283487)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="SmallDirtPile5" unique_id=897458257]
+transform = Transform3D(0.9244264, -0.16083929, -0.34578395, -0.10209656, 0.76923746, -0.6307532, 0.36743987, 0.6183884, 0.6946825, 0.6395979, -0.14407349, -0.11580658)
+operation = 2
+size = Vector3(0.69140625, 1.859375, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="SmallDirtPile5" unique_id=1294529778]
+transform = Transform3D(0.11378765, -0.9313892, -0.34578395, 0.70669985, 0.32050824, -0.6307533, 0.69830334, -0.17259341, 0.6946825, 0.0228042, 0.20364378, 0.22175026)
+operation = 2
+size = Vector3(0.69140625, 1, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="SmallDirtPile6" type="CSGSphere3D" parent="." unique_id=111911211]
+transform = Transform3D(-0.46497872, 0.7767279, -0.4248397, 0.13353926, -0.4128469, -0.900958, -0.87519276, -0.47565916, 0.08824149, 0.39436626, -0.12841797, 0.30681896)
+use_collision = true
+material = SubResource("StandardMaterial3D_ol60w")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SmallDirtPile6" unique_id=182109069]
+transform = Transform3D(0.95374274, 0.25592068, 0.157732, -0.19358093, 0.9242454, -0.32908443, -0.23000263, 0.28332806, 0.93103385, -0.7336416, 0, 0)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="SmallDirtPile6" unique_id=221352001]
+transform = Transform3D(0.7235905, -0.6719652, 0.15773197, 0.6801025, 0.65510595, -0.32908443, 0.1178021, 0.34539637, 0.93103385, -0.45306537, -0.52601355, -0.12073496)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="SmallDirtPile6" unique_id=1927168829]
+transform = Transform3D(-0.09107135, -0.6670686, -0.73940873, 0.15165114, 0.7245442, -0.6723373, 0.98422956, -0.17336267, 0.035176337, 0.16102864, -0.1186641, -0.74123275)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="SmallDirtPile6" unique_id=659635150]
+transform = Transform3D(0.14057952, -0.78008515, 0.60967565, -0.9058632, 0.14717048, 0.39718118, -0.3995614, -0.6081181, -0.6859614, 0.07762156, -0.610569, -0.30283487)
+operation = 2
+size = Vector3(0.69140625, 1, 1)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="SmallDirtPile6" unique_id=1358389387]
+transform = Transform3D(0.9244264, -0.16083929, -0.34578395, -0.10209656, 0.76923746, -0.6307532, 0.36743987, 0.6183884, 0.6946825, 0.6395979, -0.14407349, -0.11580658)
+operation = 2
+size = Vector3(0.69140625, 1.859375, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="SmallDirtPile6" unique_id=2097940724]
+transform = Transform3D(0.11378765, -0.9313892, -0.34578395, 0.70669985, 0.32050824, -0.6307533, 0.69830334, -0.17259341, 0.6946825, 0.0228042, 0.20364378, 0.22175026)
+operation = 2
+size = Vector3(0.69140625, 1, 1.5996094)
+material = SubResource("StandardMaterial3D_4lkav")

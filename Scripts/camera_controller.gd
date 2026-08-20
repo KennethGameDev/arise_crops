@@ -27,7 +27,7 @@ func _input(event: InputEvent) -> void:
 func _process(_delta: float) -> void:
 	if !cam_owner: return
 	
-	input_rotation.x = clampf(input_rotation.x + mouse_input.y, deg_to_rad(-90), deg_to_rad(85))
+	input_rotation.x = clampf(input_rotation.x + mouse_input.y, deg_to_rad(-90), deg_to_rad(70))
 	input_rotation.y += mouse_input.x
 
 	yaw_controller.global_rotation.y = input_rotation.y
