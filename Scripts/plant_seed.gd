@@ -2,15 +2,24 @@ extends Node3D
 
 
 @onready var starting_pos: Vector3 = get_global_position()
-var amplitude: float = 40.0
-var frequency: float = 3.0
-var rotation_speed: float = 2.0
+@export var amplitude: float = 40.0
+@export var frequency: float = 3.0
+@export var rotation_speed: float = 2.0
 var time: float = 0.0
+var wavelength_completed: bool = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	time += delta
+	if time > frequency and !wavelength_completed:
+		wavelength_completed = true
+	elif time <= frequency and wavelength_completed:
+		wavelength_completed = false
+	if wavelength_completed:
+		time = 0.0
+	else:
+		time += delta
 	var offset: float = cos(time * frequency) * amplitude
 	global_position.y = starting_pos.y + offset * delta
 	rotate(Vector3.UP, rotation_speed * delta)
+	print(global_position.y, time)

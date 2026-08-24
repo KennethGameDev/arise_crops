@@ -4,8 +4,7 @@ extends Node
 var player: PlayerCharacter = null
 var cam_controller: CameraController = null
 var cam_owner: Node3D = null
-var sun: Sun = null
-var atmosphere: Atmosphere = null
+var sky: Sky3D = null
 
 
 func _ready() -> void:

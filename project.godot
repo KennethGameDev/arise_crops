@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Main="*uid://bs55h1ru0cp0"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sky_3d/plugin.cfg")
+
 [input]
 
 move_left={

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2xix52kisufx"]
 
-[ext_resource type="Script" uid="uid://dc75m7vrf6ywo" path="res://Scenes/planting_spot.gd" id="1_lg652"]
+[ext_resource type="Script" uid="uid://dc75m7vrf6ywo" path="res://Scripts/planting_spot.gd" id="1_lg652"]
 
 [sub_resource type="Gradient" id="Gradient_rhlvc"]
 offsets = PackedFloat32Array(0, 0.53333336)
@@ -23,6 +23,10 @@ roughness_texture = SubResource("NoiseTexture2D_occat")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lkav"]
 albedo_color = Color(0.3, 0.24985002, 0.12300001, 1)
 roughness_texture = SubResource("NoiseTexture2D_occat")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_11hut"]
+height = 1.2558746
+radius = 0.7324219
 
 [node name="PlantingSpot" type="Node3D" unique_id=1535176934]
 script = ExtResource("1_lg652")
@@ -272,3 +276,11 @@ transform = Transform3D(0.11378765, -0.9313892, -0.34578395, 0.70669985, 0.32050
 operation = 2
 size = Vector3(0.69140625, 1, 1.5996094)
 material = SubResource("StandardMaterial3D_4lkav")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1848050706]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1872204061]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58686066, 0)
+shape = SubResource("CylinderShape3D_11hut")

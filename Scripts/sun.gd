@@ -16,7 +16,7 @@ var evening_time_factor: float = 0.7
 var sunset_time_factor: float = 0.834
 var sundown_time_factor: float = 0.95
 
-var day_max_length_sec: float = 120.0 # 660.0 # 11 minutes
+var day_max_length_sec: float = 30.0 # 660.0 # 11 minutes
 var day_current_length_sec: float = day_max_length_sec
 var time_of_sunrise_sec: float = day_current_length_sec * sunrise_time_factor
 var time_of_daytime_sec: float = day_current_length_sec * daytime_time_factor
@@ -28,19 +28,15 @@ var time_of_night_end_sec: float = day_current_length_sec + 60.0
 var current_time_of_day: float = 0.0
 var sun_speed_mult: float
 
-signal morning_started
-signal day_started
-signal evening_started
-signal sunset_started
-signal night_started
-signal night_ended
+enum DAY_PHASES {SUNRISE, DAYTIME, EVENING, SUNSET, NIGHTTIME}
+var current_day_phase: DAY_PHASES = DAY_PHASES.SUNRISE
+
+signal day_phase_changed
 
 var DEBUG_Stop_time: bool = false
 
 
 func _ready() -> void:
-	Main.sun = self
-	morning_started.connect(_morning_started_emitted)
 	rise_for_the_day()
 
 
@@ -52,6 +48,17 @@ func _process(delta: float) -> void:
 		rotate_object_local(Vector3.RIGHT, sun_speed_mult)
 	elif current_time_of_day < time_of_night_end_sec:
 		current_time_of_day += delta
+	
+	if current_time_of_day < time_of_daytime_sec and current_day_phase != DAY_PHASES.SUNRISE:
+		current_day_phase = DAY_PHASES.SUNRISE
+	elif current_time_of_day < time_of_evening_sec and current_day_phase != DAY_PHASES.DAYTIME:
+		current_day_phase = DAY_PHASES.DAYTIME
+	elif current_time_of_day < time_of_sunset_sec and current_day_phase != DAY_PHASES.EVENING:
+		current_day_phase = DAY_PHASES.EVENING
+	elif current_time_of_day < time_of_sundown_sec and current_day_phase != DAY_PHASES.SUNSET:
+		current_time_of_day = DAY_PHASES.SUNSET
+	elif current_time_of_day > time_of_sundown_sec and current_day_phase != DAY_PHASES.NIGHTTIME:
+		current_day_phase = DAY_PHASES.NIGHTTIME
 
 
 func _input(event: InputEvent) -> void:
@@ -82,7 +89,6 @@ func rise_for_the_day() -> void:
 	transform.basis = Basis(sun_start_orbit_transform)
 	current_time_of_day = 0.0
 	day_current_length_sec = day_max_length_sec
-	morning_started.emit()
 
 
 func _morning_started_emitted() -> void:
