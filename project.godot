@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Main="*uid://bs55h1ru0cp0"
+GameMaster="*uid://bs55h1ru0cp0"
 
 [editor_plugins]
 

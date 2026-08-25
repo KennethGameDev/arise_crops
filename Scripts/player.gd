@@ -15,26 +15,26 @@ extends CharacterBody3D
 @export var jump_velocity: float = 4.5
 
 ## Camera-related Vars ##
-@onready var cam_anchor: Marker3D = %CamAnchor
+@onready var cam_controller: CameraController = %CamController
 var cam_transform_y: float = 0.0
-var cam_controller: CameraController = null
 
 ## Simple State Machine Vars ##
-enum PLAYER_STATE {WALKING, JUMPING, FALLING, INTERACTING}
+enum PLAYER_STATE {WALKING, JUMPING, FALLING}
 var current_state: PLAYER_STATE = PLAYER_STATE.WALKING
+
+## Planting Vars ##
+var seed_inventory: Array[PlantSeed] = []
 
 #endregion
 
 
+#region: Core Functions
+
 func _ready() -> void:
-	Main.player = self
-	if Main.cam_controller and Main.player:
-		Main.change_cam_ownership(Main.player)
+	GameMaster.player = self
 
 
 func _input(event: InputEvent) -> void:
-	if !cam_controller: return
-
 	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y += jump_velocity
 		_change_state(PLAYER_STATE.JUMPING)
@@ -42,8 +42,6 @@ func _input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)
-	
-	if !cam_controller: return
 
 	_process_state(delta)
 
@@ -70,9 +68,6 @@ func _process_state(delta: float) -> void:
 			if is_on_floor():
 				_change_state(PLAYER_STATE.WALKING)
 
-		PLAYER_STATE.INTERACTING:
-			pass
-
 
 func _change_state(new_state: PLAYER_STATE) -> void:
 	current_state = new_state
@@ -93,7 +88,7 @@ func _handle_movement(delta: float) -> void:
 			movement_accel = air_accel
 			movement_deccel = air_deccel
 	
-	cam_transform_y = Main.cam_controller.yaw_controller.global_transform.basis.get_euler().y
+	cam_transform_y = cam_controller.yaw_controller.global_transform.basis.get_euler().y
 
 	var input: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var input_dir: Vector3 = Vector3(input.x, 0.0, input.y)
@@ -111,3 +106,21 @@ func _handle_movement(delta: float) -> void:
 	
 	if forward_dir != Vector3.ZERO:
 		rotation.y = lerp_angle(rotation.y, atan2(-forward_dir.x, -forward_dir.z), turn_speed * delta)
+
+#endregion
+
+
+#region: Planting Functions
+
+func add_seed_to_inventory(new_seed: PlantSeed) -> void:
+	seed_inventory.append(new_seed)
+
+
+func pop_seed_from_inventory() -> PlantSeed:
+	return seed_inventory.pop_front()
+
+#endregion
+
+
+#region: Detection Functions
+#endregion

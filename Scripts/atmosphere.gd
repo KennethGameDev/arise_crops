@@ -12,7 +12,7 @@ var elapsed_time: float = 0.0
 
 
 func _ready() -> void:
-	Main.atmosphere = self
+	GameMaster.atmosphere = self
 
 
 # func _input(event: InputEvent) -> void:
@@ -26,17 +26,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	elapsed_time += delta
 
-	match Main.sun.current_day_phase:
-		Main.sun.DAY_PHASES.SUNRISE:
-			lerp_color = lerp_color.lerp(sunrise_sky_color, elapsed_time / Main.sun.time_of_sunrise_sec)
-		Main.sun.DAY_PHASES.DAYTIME:
-			lerp_color = lerp_color.lerp(daytime_sky_color, elapsed_time / (Main.sun.time_of_daytime_sec - Main.sun.time_of_sunrise_sec))
-		Main.sun.DAY_PHASES.EVENING:
-			lerp_color = lerp_color.lerp(evening_sky_color, elapsed_time / (Main.sun.time_of_evening_sec - Main.sun.time_of_daytime_sec))
-		Main.sun.DAY_PHASES.SUNSET:
-			lerp_color = lerp_color.lerp(sunset_sky_color, elapsed_time / (Main.sun.time_of_sunset_sec - Main.sun.time_of_evening_sec))
-		Main.sun.DAY_PHASES.NIGHTTIME:
-			lerp_color = lerp_color.lerp(nightime_sky_color, elapsed_time / (Main.sun.time_of_sundown_sec - Main.sun.time_of_sunset_sec))
+	match GameMaster.sun.current_day_phase:
+		GameMaster.sun.DAY_PHASES.SUNRISE:
+			lerp_color = lerp_color.lerp(sunrise_sky_color, elapsed_time / GameMaster.sun.time_of_sunrise_sec)
+		GameMaster.sun.DAY_PHASES.DAYTIME:
+			lerp_color = lerp_color.lerp(daytime_sky_color, elapsed_time / (GameMaster.sun.time_of_daytime_sec - GameMaster.sun.time_of_sunrise_sec))
+		GameMaster.sun.DAY_PHASES.EVENING:
+			lerp_color = lerp_color.lerp(evening_sky_color, elapsed_time / (GameMaster.sun.time_of_evening_sec - GameMaster.sun.time_of_daytime_sec))
+		GameMaster.sun.DAY_PHASES.SUNSET:
+			lerp_color = lerp_color.lerp(sunset_sky_color, elapsed_time / (GameMaster.sun.time_of_sunset_sec - GameMaster.sun.time_of_evening_sec))
+		GameMaster.sun.DAY_PHASES.NIGHTTIME:
+			lerp_color = lerp_color.lerp(nightime_sky_color, elapsed_time / (GameMaster.sun.time_of_sundown_sec - GameMaster.sun.time_of_sunset_sec))
 	
 	environment.sky.sky_material.sky_top_color = lerp_color
 

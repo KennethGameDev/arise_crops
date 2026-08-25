@@ -550,4 +550,4 @@ func _set(property: StringName, value: Variant) -> bool:
 
 
 func _ready() -> void:
-	Main.sky = self
+	GameMaster.sky = self

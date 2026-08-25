@@ -2,14 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cbreu3k8lvq6r" path="res://Scenes/world.tscn" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bqa2eno86cyx1" path="res://Scenes/player.tscn" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://dttqyblo5jwn3" path="res://Scenes/camera_controller.tscn" id="3_jjvhh"]
 
-[node name="Main" type="Node" unique_id=1172361711]
+[node name="Game" type="Node" unique_id=1172361711]
 
 [node name="World" parent="." unique_id=1150854369 instance=ExtResource("1_8gbba")]
-unique_name_in_owner = true
-
-[node name="CameraController" parent="." unique_id=866665694 instance=ExtResource("3_jjvhh")]
 unique_name_in_owner = true
 
 [node name="Player" parent="." unique_id=1153890603 instance=ExtResource("1_jjgbg")]
