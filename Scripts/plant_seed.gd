@@ -26,3 +26,7 @@ func _process(delta: float) -> void:
 	var offset: float = cos(time * frequency) * amplitude
 	global_position.y = starting_pos.y + offset * delta
 	rotate(Vector3.UP, rotation_speed * delta)
+
+
+func _on_seed_detected_by_player() -> void:
+	pass

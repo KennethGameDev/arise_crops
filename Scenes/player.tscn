@@ -35,7 +35,6 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.741, 0)
 script = ExtResource("3_6t5aa")
-mouse_sens = null
 
 [node name="YawController" type="Node3D" parent="CamController" unique_id=1504486373]
 unique_name_in_owner = true
@@ -96,3 +95,5 @@ grow_horizontal = 2
 max_value = 1.0
 step = 0.0
 show_percentage = false
+
+[connection signal="area_entered" from="DetectionArea" to="." method="_on_detection_area_entered"]

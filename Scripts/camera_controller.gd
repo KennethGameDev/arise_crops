@@ -2,6 +2,7 @@ class_name CameraController
 extends Node3D
 
 
+@onready var camera: Camera3D = %Camera3D
 @onready var yaw_controller: Node3D = %YawController
 @onready var pitch_controller: Node3D = %PitchController
 @export var mouse_sens: float = 0.005

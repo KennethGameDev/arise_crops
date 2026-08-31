@@ -24,6 +24,7 @@ var current_state: PLAYER_STATE = PLAYER_STATE.WALKING
 
 ## Planting Vars ##
 var seed_inventory: Array[PlantSeed] = []
+signal seed_detected
 
 #endregion
 
@@ -32,6 +33,7 @@ var seed_inventory: Array[PlantSeed] = []
 
 func _ready() -> void:
 	GameMaster.player = self
+	#seed_detected.connect(PlantSeed._on_seed_detected_by_player)
 
 
 func _input(event: InputEvent) -> void:
@@ -123,4 +125,10 @@ func pop_seed_from_inventory() -> PlantSeed:
 
 
 #region: Detection Functions
+
+func _on_detection_area_entered(area: Area3D) -> void:
+	if area.get_parent() is PlantSeed:
+		print("Seed Detected")
+		seed_detected.emit(area.get_parent())
+
 #endregion
