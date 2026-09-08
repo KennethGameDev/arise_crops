@@ -50,6 +50,7 @@ margin = 0.2
 
 [node name="Camera3D" type="Camera3D" parent="CamController/YawController/PitchController/SpringArm3D" unique_id=2135649542]
 unique_name_in_owner = true
+far = 30000.0
 
 [node name="DetectionArea" type="Area3D" parent="." unique_id=778125265]
 unique_name_in_owner = true

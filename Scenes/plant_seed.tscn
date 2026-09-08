@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cm7sp7mpehh0h"]
 
 [ext_resource type="Script" uid="uid://xdcqkl6esdq5" path="res://Scripts/plant_seed.gd" id="1_psvwo"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11hut"]
-albedo_color = Color(0.611295, 0.83, 0.4067, 1)
+[ext_resource type="ArrayMesh" uid="uid://dmetnd0rqhx5n" path="res://Assets/World/misc/Plant Seed/seed_mesh.res" id="2_jnl03"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_11hut"]
 radius = 0.20361328
@@ -15,42 +13,8 @@ amplitude = 25.0
 frequency = 2.5
 rotation_speed = 1.5
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=425861517]
-unique_name_in_owner = true
-use_collision = true
-material = SubResource("StandardMaterial3D_11hut")
-
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSGSphere3D" unique_id=381064520]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5206331, -0.54382664, 0.6307481)
-operation = 2
-polygon = PackedVector2Array(0, 0, 0.0098593235, 1.0707023, 0.53360885, 1.093843, 0.53255916, 0.8304071, 0.43983805, 0.7158036, 0.35187447, 0.49565428, 0.3737156, 0.354668, 0.5227017, 0.26166943, 0.525, 0)
-depth = 1.27
-material = SubResource("StandardMaterial3D_11hut")
-
-[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="CSGSphere3D" unique_id=384640239]
-unique_name_in_owner = true
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.5208591, -0.54382664, -0.64797944)
-operation = 2
-polygon = PackedVector2Array(0, 0, 0.0098593235, 1.0707023, 0.53360885, 1.093843, 0.53255916, 0.8304071, 0.43983805, 0.7158036, 0.35187447, 0.49565428, 0.3737156, 0.354668, 0.5216554, 0.26304552, 0.525, 0)
-depth = 1.27
-material = SubResource("StandardMaterial3D_11hut")
-
-[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="CSGSphere3D" unique_id=197486337]
-unique_name_in_owner = true
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.24663854, -0.38353187, 0.5501383)
-operation = 2
-polygon = PackedVector2Array(0, 0, 0.025391757, 0.7398546, 0.56353104, 0.7343712, 0.5325329, 0.55600363, 0.5028888, 0.3363542, 0.531184, 0.19585699, 0.56895214, 0.0016205907)
-depth = 0.5
-material = SubResource("StandardMaterial3D_11hut")
-
-[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="CSGSphere3D" unique_id=298844204]
-unique_name_in_owner = true
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -0.2614373, -0.38353187, -0.55100024)
-operation = 2
-polygon = PackedVector2Array(0, 0, 0.025391757, 0.7398546, 0.56731766, 0.7373904, 0.5325329, 0.55600363, 0.50385076, 0.33792752, 0.531184, 0.19585699, 0.56895214, 0.0016205907)
-depth = 0.5
-material = SubResource("StandardMaterial3D_11hut")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1008164084]
+mesh = ExtResource("2_jnl03")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=774822210]
 unique_name_in_owner = true

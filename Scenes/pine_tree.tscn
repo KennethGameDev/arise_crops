@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://corfdldx085hn"]
+
+[ext_resource type="ArrayMesh" uid="uid://bdp7sfpm3l8q2" path="res://Assets/World/Trees/pine/Cylinder.res" id="1_hc8gf"]
+[ext_resource type="ArrayMesh" uid="uid://dkjhosr20pniw" path="res://Assets/World/Trees/pine/Circle.res" id="2_siv8p"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_11hut"]
+height = 4.824463
+radius = 3.4047852
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hc8gf"]
+height = 3.2939606
+radius = 0.8417969
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_siv8p"]
+height = 4.824463
+radius = 2.022461
+
+[node name="PineTree" type="StaticBody3D" unique_id=1691481575]
+
+[node name="Trunk" type="MeshInstance3D" parent="." unique_id=969662466]
+mesh = ExtResource("1_hc8gf")
+
+[node name="Leaves" type="MeshInstance3D" parent="." unique_id=926207323]
+transform = Transform3D(1, 0, 0, 0, 1, 7.105428e-15, 0, -7.105428e-15, 1, 0, 0.42147923, 0.0014801587)
+mesh = ExtResource("2_siv8p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1684240697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1365614, 5.125004, -0.08690238)
+shape = SubResource("CylinderShape3D_11hut")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1652753924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.021, 0)
+shape = SubResource("CylinderShape3D_hc8gf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1159044937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1365614, 10.013846, -0.08690238)
+shape = SubResource("CylinderShape3D_siv8p")

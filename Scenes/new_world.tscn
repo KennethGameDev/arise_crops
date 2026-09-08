@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://qyp63yqfxj37"]
+
+[ext_resource type="Texture2D" uid="uid://6oa4kulbaeo0" path="res://Assets/World/Terrain/grass_color.png" id="1_0bg3q"]
+[ext_resource type="Texture2D" uid="uid://dkqde7euk103a" path="res://Assets/World/Terrain/grass_normal.png" id="2_5hg4a"]
+[ext_resource type="Texture2D" uid="uid://v0sjfk7e7eo2" path="res://Assets/World/Terrain/stone_color.png" id="3_neqsr"]
+[ext_resource type="Texture2D" uid="uid://cwqam532of3sx" path="res://Assets/World/Terrain/stone_normal.png" id="4_y0tbk"]
+[ext_resource type="Material" uid="uid://c7mw5tryqfggw" path="res://addons/proton_scatter/demos/assets/materials/m_water.tres" id="5_5hg4a"]
+
+[sub_resource type="Gradient" id="Gradient_6wb0h"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_oqwi3"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pnhvw"]
+noise = SubResource("FastNoiseLite_oqwi3")
+color_ramp = SubResource("Gradient_6wb0h")
+seamless = true
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_d1c6e"]
+_shader_parameters = {
+&"bias_distance": null,
+&"blend_sharpness": null,
+&"depth_blur": null,
+&"enable_macro_variation": null,
+&"enable_projection": null,
+&"flat_terrain_normals": null,
+&"macro_variation1": null,
+&"macro_variation2": null,
+&"macro_variation_slope": null,
+&"mipmap_bias": null,
+&"noise1_angle": null,
+&"noise1_offset": null,
+&"noise1_scale": null,
+&"noise2_scale": null,
+&"noise_texture": SubResource("NoiseTexture2D_pnhvw"),
+&"projection_threshold": null
+}
+world_background = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0bg3q"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_5hg4a"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_0bg3q")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_5614q"]
+name = "grass_color"
+albedo_texture = ExtResource("1_0bg3q")
+normal_texture = ExtResource("2_5hg4a")
+roughness = -0.142
+detiling_rotation = 0.034
+detiling_shift = 0.054
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_0y35o"]
+name = "stone_color"
+id = 1
+albedo_texture = ExtResource("3_neqsr")
+normal_texture = ExtResource("4_y0tbk")
+normal_depth = 1.037
+uv_scale = 1.017
+detiling_rotation = 0.151
+detiling_shift = 0.332
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_neqsr"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_5hg4a")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_5614q"), SubResource("Terrain3DTextureAsset_0y35o")])
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_11hut"]
+material = ExtResource("5_5hg4a")
+size = Vector2(60000, 60000)
+
+[node name="NewWorld" type="Node" unique_id=594020458]
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=2081672042]
+data_directory = "res://data/terrain3d"
+material = SubResource("Terrain3DMaterial_d1c6e")
+assets = SubResource("Terrain3DAssets_neqsr")
+label_distance = 15000.0
+label_size = 24
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=472577101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0)
+mesh = SubResource("PlaneMesh_11hut")

@@ -1,0 +1,1298 @@
+[gd_scene format=3 uid="uid://b15m6c1mxh5fa"]
+
+[ext_resource type="Material" uid="uid://c4h7uypyylxmu" path="res://Assets/World/Trees/round/tree_leaves.tres" id="2_l0ape"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a74au"]
+albedo_color = Color(0.46342278, 0.16583392, 0.029325586, 1)
+
+[node name="RoundTree" type="Node3D" unique_id=1499775482]
+
+[node name="Trunk" type="CSGCylinder3D" parent="." unique_id=1332597968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.466387, 0)
+autosmooth = true
+use_collision = true
+radius = 0.65771484
+height = 11.340664
+material = SubResource("StandardMaterial3D_a74au")
+
+[node name="Leaves01" type="CSGSphere3D" parent="Trunk" unique_id=1568847905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5051374, 0)
+autosmooth = true
+use_collision = true
+radius = 2.5221355
+material = ExtResource("2_l0ape")
+
+[node name="Leaves02" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=731451969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0870457, 1.3877192, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves11" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1555716960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6190072, 0.13877201, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves03" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=393102424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39318657, 1.4339771, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves04" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1742124389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0870476, 0.925148, 0)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves05" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1882042219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6652641, -0.13876915, 0)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves06" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=272818335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3183346, -1.3877153, 0)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves07" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=162270723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04625702, -1.8734169, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves08" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1290351771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1740932, -2.243476, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves09" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1252381957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.798565, -1.3183298, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves10" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=640300068]
+transform = Transform3D(0.6522617, 0.4341494, -0.62134457, -0.31434965, 0.9008409, 0.29944953, 0.6897384, 0, 0.7240587, -3.6357203, 3.146716, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves12" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1136938260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2561984, 3.8739166, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves24" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1473741287]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, 0.6101315, 1.2839079, -0.968042)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves25" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=526201194]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, 0.9418824, 0.034960747, -1.3838838)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves26" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=254165658]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, -0.31299624, 1.3301659, 0.18907627)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves27" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=407124654]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, -0.7457137, 0.82133675, 0.73147714)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves28" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=288688416]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, -1.106311, -0.24258041, 1.1834772)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves29" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1727324405]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, -0.88995284, -1.4915266, 0.91227734)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves30" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1098366028]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, -0.038942903, -1.9772282, -0.15444297)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves31" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=871843301]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, 1.2880546, -2.3472872, -1.8178023)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves32" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1700329910]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, -1.8130795, -1.4221411, 2.069394)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves33" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1038686991]
+transform = Transform3D(0.9459528, 0.27075168, 0.17851332, -0.31434965, 0.9008409, 0.29944953, -0.07973567, -0.33938068, 0.9372636, -2.3351603, 3.0429049, 2.7238102)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves34" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1808802159]
+transform = Transform3D(0.6236371, 0, 0.781714, 0, 1, 0, -0.781714, 0, 0.6236371, 1.9628954, 3.7701054, -2.6636992)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves13" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=608269354]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, 0.20342262, 1.7624083, 0.14768693)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves14" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=977162611]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, 0.48021722, 1.1301479, 1.3166542)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves15" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=2089323384]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, -0.36587858, 0.8954649, -0.90944684)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves16" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=632184151]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, -0.6016571, 0.08277035, -1.0652922)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves17" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1458339212]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, -0.760648, -1.0845585, -0.7854387)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves18" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=344273057]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, -0.55467844, -1.8296165, 0.25508645)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves19" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=2064277093]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, -0.0038945228, -1.0614367, 1.4173092)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves20" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=91354522]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, 0.8322624, -0.35599422, 3.2273266)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves21" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=538748677]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, -1.125334, -2.6788454, -0.8168549)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves22" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=1637472371]
+transform = Transform3D(-0.36784244, 0.11340061, -0.9229476, 0.29786807, 0.95460594, -0.0014254178, 0.8808898, -0.27544096, -0.3849231, -1.7073768, 0.23053074, -4.256945)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves23" type="CSGSphere3D" parent="Trunk/Leaves01" unique_id=805237445]
+transform = Transform3D(0.38277173, -0.0585892, -0.92198324, 0.60961515, 0.7658865, 0.2044189, 0.69415784, -0.6403008, 0.32887655, 0.88804865, 4.988902, 0.061506756)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Branch01" type="CSGCylinder3D" parent="." unique_id=576280002]
+transform = Transform3D(0.5934708, -0.9131938, -0.11355352, 0.9181441, 0.5966879, 0, 0.06187763, -0.09521323, 1.0890962, -1.0296423, 7.4397, -0.16539475)
+autosmooth = true
+use_collision = true
+radius = 0.27294922
+height = 2.5942895
+material = SubResource("StandardMaterial3D_a74au")
+
+[node name="Leaves01" type="CSGSphere3D" parent="Branch01" unique_id=1532905394]
+transform = Transform3D(0.435, -1.2003712e-08, 0, 1.2003712e-08, 0.435, 0, 0, 0, 0.435, 0.06632757, 2.2861881, 0)
+autosmooth = true
+use_collision = true
+radius = 2.5221355
+material = ExtResource("2_l0ape")
+
+[node name="Leaves02" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=853085325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0870452, 1.3877192, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves11" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=720418411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6190076, 0.13877201, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves03" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=735556113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39318657, 1.4339762, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves04" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=2014115003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0870476, 0.925148, 0)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves05" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1339599493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6652641, -0.1387701, 0)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves06" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1440596285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3183355, -1.3877163, 0)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves07" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=219464229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04625678, -1.8734169, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves08" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=510856625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1740928, -2.2434769, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves09" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1623114514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7985659, -1.3183317, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves10" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1529438234]
+transform = Transform3D(0.6522617, 0.43414944, -0.6213446, -0.31434965, 0.90084094, 0.29944956, 0.6897384, 0, 0.7240587, -3.6357212, 3.146716, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves12" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1588798721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2561975, 3.8739157, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves24" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=728421333]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 0.6101303, 1.2839069, -0.968042)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves25" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=282337849]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 0.94188166, 0.034960747, -1.3838838)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves26" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1609914572]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.31299686, 1.3301649, 0.18907627)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves27" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1116238257]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.7457137, 0.82133675, 0.73147714)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves28" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=227142817]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -1.1063113, -0.24258041, 1.1834772)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves29" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=990282753]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.88995266, -1.4915266, 0.91227734)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves30" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1004880337]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.038943768, -1.9772291, -0.15444297)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves31" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=468753782]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 1.288054, -2.3472881, -1.8178023)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves32" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=770023843]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -1.8130803, -1.4221411, 2.069394)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves33" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=456930174]
+transform = Transform3D(0.9459528, 0.2707517, 0.17851333, -0.3143497, 0.9008409, 0.29944956, -0.07973567, -0.33938068, 0.9372636, -2.3351603, 3.042903, 2.7238102)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves34" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1250788731]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 1.9628959, 3.7701063, -2.6636992)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves13" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1167411918]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.20342207, 1.7624073, 0.14768693)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves14" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=2039970970]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.48021698, 1.1301479, 1.3166542)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves15" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=946285326]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.36587858, 0.8954649, -0.90944684)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves16" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1476596393]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.60165787, 0.082769394, -1.0652922)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves17" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=658154629]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.7606487, -1.0845594, -0.7854387)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves18" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=550581557]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.55467844, -1.8296175, 0.25508645)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves19" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1206666705]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.0038952827, -1.0614376, 1.4173092)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves20" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=338533555]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.8322625, -0.35599422, 3.2273266)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves21" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=1876426351]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -1.1253347, -2.6788464, -0.8168549)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves22" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=925929554]
+transform = Transform3D(-0.36784247, 0.11340064, -0.92294765, 0.29786807, 0.95460606, -0.0014254451, 0.8808898, -0.27544096, -0.3849231, -1.7073779, 0.23053074, -4.256945)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves23" type="CSGSphere3D" parent="Branch01/Leaves01" unique_id=87504785]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.8880482, 4.988902, 0.061506756)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Branch02" type="CSGCylinder3D" parent="." unique_id=1335807483]
+transform = Transform3D(0.09265175, -0.14256641, 0.87360775, 0.6671496, 0.5885337, 0.025288872, -0.58174485, 0.65222925, 0.16813684, -0.2662388, 6.9102426, 1.2634599)
+autosmooth = true
+use_collision = true
+radius = 0.32958984
+height = 3.9512744
+material = SubResource("StandardMaterial3D_a74au")
+
+[node name="Leaves01" type="CSGSphere3D" parent="Branch02" unique_id=1396239507]
+transform = Transform3D(0.7, -1.9316317e-08, 0, 1.9316317e-08, 0.7, 0, 0, 0, 0.7, 0.06632757, 2.2861881, 0)
+autosmooth = true
+use_collision = true
+radius = 2.5221355
+material = ExtResource("2_l0ape")
+
+[node name="Leaves02" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1022745181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0870452, 1.3877192, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves11" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=975517515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6190076, 0.13877201, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves03" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1859775124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39318657, 1.4339762, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves04" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1114306315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0870476, 0.925148, 0)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves05" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1000531001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6652641, -0.1387701, 0)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves06" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1319836005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3183355, -1.3877163, 0)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves07" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1743537097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04625678, -1.8734169, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves08" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=231665771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1740928, -2.2434769, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves09" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=681097243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7985659, -1.3183317, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves10" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=411519811]
+transform = Transform3D(0.6522617, 0.43414944, -0.6213446, -0.31434965, 0.90084094, 0.29944956, 0.6897384, 0, 0.7240587, -3.6357212, 3.146716, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves12" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1688440437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2561975, 3.8739157, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves24" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=727322549]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 0.6101303, 1.2839069, -0.968042)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves25" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=392720963]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 0.94188166, 0.034960747, -1.3838838)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves26" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1955148312]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.31299686, 1.3301649, 0.18907627)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves27" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1110580651]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.7457137, 0.82133675, 0.73147714)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves28" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1536453401]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -1.1063113, -0.24258041, 1.1834772)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves29" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=569067817]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.88995266, -1.4915266, 0.91227734)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves30" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=46297354]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.038943768, -1.9772291, -0.15444297)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves31" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1428068623]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 1.288054, -2.3472881, -1.8178023)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves32" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=444644936]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -1.8130803, -1.4221411, 2.069394)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves33" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=248036068]
+transform = Transform3D(0.9459528, 0.2707517, 0.17851333, -0.3143497, 0.9008409, 0.29944956, -0.07973567, -0.33938068, 0.9372636, -2.3351603, 3.042903, 2.7238102)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves34" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1999894659]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 1.9628959, 3.7701063, -2.6636992)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves13" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=615762284]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.20342207, 1.7624073, 0.14768693)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves14" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=423848373]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.48021698, 1.1301479, 1.3166542)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves15" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=162890020]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.36587858, 0.8954649, -0.90944684)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves16" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=104908517]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.60165787, 0.082769394, -1.0652922)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves17" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=389966992]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.7606487, -1.0845594, -0.7854387)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves18" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=735840855]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.55467844, -1.8296175, 0.25508645)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves19" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=350370835]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.0038952827, -1.0614376, 1.4173092)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves20" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1109518964]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.8322625, -0.35599422, 3.2273266)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves21" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=1314122230]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -1.1253347, -2.6788464, -0.8168549)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves22" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=997561872]
+transform = Transform3D(-0.36784247, 0.11340064, -0.92294765, 0.29786807, 0.95460606, -0.0014254451, 0.8808898, -0.27544096, -0.3849231, -1.7073779, 0.23053074, -4.256945)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves23" type="CSGSphere3D" parent="Branch02/Leaves01" unique_id=203317492]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.8880482, 4.988902, 0.061506756)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Branch04" type="CSGCylinder3D" parent="." unique_id=482331700]
+transform = Transform3D(-0.3333696, 0.36621386, 0.2719874, 0.4235276, 0.37361968, 0.016054168, -0.16945238, 0.21335599, -0.4949648, 0.8046726, 5.3863916, 0.52783525)
+autosmooth = true
+use_collision = true
+radius = 0.38330078
+height = 3.103567
+material = SubResource("StandardMaterial3D_a74au")
+
+[node name="Leaves01" type="CSGSphere3D" parent="Branch04" unique_id=190933472]
+transform = Transform3D(0.5400001, -1.4901161e-08, 0, 1.4901161e-08, 0.5400001, 0, 0, 0, 0.54, 0.06632757, 2.2861881, 0)
+autosmooth = true
+use_collision = true
+radius = 2.5221355
+material = ExtResource("2_l0ape")
+
+[node name="Leaves02" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=271757239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0870452, 1.3877192, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves11" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=171850476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6190076, 0.13877201, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves03" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=484621316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39318657, 1.4339762, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves04" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1317308841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0870476, 0.925148, 0)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves05" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=123268117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6652641, -0.1387701, 0)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves06" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1750195568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3183355, -1.3877163, 0)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves07" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=387160533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04625678, -1.8734169, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves08" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1964273411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1740928, -2.2434769, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves09" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=82067997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7985659, -1.3183317, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves10" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1488196316]
+transform = Transform3D(0.6522617, 0.43414944, -0.6213446, -0.31434965, 0.90084094, 0.29944956, 0.6897384, 0, 0.7240587, -3.6357212, 3.146716, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves12" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=652234250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2561975, 3.8739157, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves24" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1070400094]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 0.6101303, 1.2839069, -0.968042)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves25" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1745312660]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 0.94188166, 0.034960747, -1.3838838)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves26" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=573169079]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.31299686, 1.3301649, 0.18907627)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves27" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1781777526]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.7457137, 0.82133675, 0.73147714)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves28" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1165719849]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -1.1063113, -0.24258041, 1.1834772)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves29" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=463613123]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.88995266, -1.4915266, 0.91227734)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves30" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1876344293]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.038943768, -1.9772291, -0.15444297)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves31" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1994384018]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 1.288054, -2.3472881, -1.8178023)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves32" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=53229778]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -1.8130803, -1.4221411, 2.069394)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves33" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=455171445]
+transform = Transform3D(0.9459528, 0.2707517, 0.17851333, -0.3143497, 0.9008409, 0.29944956, -0.07973567, -0.33938068, 0.9372636, -2.3351603, 3.042903, 2.7238102)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves34" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=282150071]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 1.9628959, 3.7701063, -2.6636992)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves13" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=147869528]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.20342207, 1.7624073, 0.14768693)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves14" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1436112202]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.48021698, 1.1301479, 1.3166542)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves15" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=802817092]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.36587858, 0.8954649, -0.90944684)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves16" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1984839127]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.60165787, 0.082769394, -1.0652922)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves17" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=961770166]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.7606487, -1.0845594, -0.7854387)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves18" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1751101454]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.55467844, -1.8296175, 0.25508645)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves19" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=174328213]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.0038952827, -1.0614376, 1.4173092)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves20" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1456778872]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.8322625, -0.35599422, 3.2273266)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves21" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1410587833]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -1.1253347, -2.6788464, -0.8168549)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves22" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=2059747156]
+transform = Transform3D(-0.36784247, 0.11340064, -0.92294765, 0.29786807, 0.95460606, -0.0014254451, 0.8808898, -0.27544096, -0.3849231, -1.7073779, 0.23053074, -4.256945)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves23" type="CSGSphere3D" parent="Branch04/Leaves01" unique_id=1219339924]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.8880482, 4.988902, 0.061506756)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Branch03" type="CSGCylinder3D" parent="." unique_id=166044027]
+transform = Transform3D(-0.4251365, 0.51394093, -0.7450663, 0.74960643, 0.6612737, 0.028414432, 0.5072961, -0.54642653, -0.66638494, 0.47041738, 6.3923306, -0.54505324)
+autosmooth = true
+use_collision = true
+radius = 0.25195313
+height = 2.3848681
+material = SubResource("StandardMaterial3D_a74au")
+
+[node name="Leaves01" type="CSGSphere3D" parent="Branch03" unique_id=814351741]
+transform = Transform3D(0.5400001, -1.4901161e-08, 0, 1.4901161e-08, 0.5400001, 0, 0, 0, 0.54, 0.06632757, 2.2861881, 0)
+autosmooth = true
+use_collision = true
+radius = 2.5221355
+material = ExtResource("2_l0ape")
+
+[node name="Leaves02" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1465151368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0870452, 1.3877192, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves11" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1366009048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6190076, 0.13877201, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves03" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=2116632330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39318657, 1.4339762, 0)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves04" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=2045829846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0870476, 0.925148, 0)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves05" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=531160669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6652641, -0.1387701, 0)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves06" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=533729591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3183355, -1.3877163, 0)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves07" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=951004019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04625678, -1.8734169, 0)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves08" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=277001069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1740928, -2.2434769, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves09" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=290757237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7985659, -1.3183317, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves10" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=149725001]
+transform = Transform3D(0.6522617, 0.43414944, -0.6213446, -0.31434965, 0.90084094, 0.29944956, 0.6897384, 0, 0.7240587, -3.6357212, 3.146716, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves12" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1820534486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2561975, 3.8739157, 0)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves24" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=469801212]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 0.6101303, 1.2839069, -0.968042)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves25" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=427824334]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 0.94188166, 0.034960747, -1.3838838)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves26" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1595203607]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.31299686, 1.3301649, 0.18907627)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves27" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=356825362]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.7457137, 0.82133675, 0.73147714)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves28" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1960967696]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -1.1063113, -0.24258041, 1.1834772)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves29" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=411708775]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.88995266, -1.4915266, 0.91227734)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves30" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=932520123]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -0.038943768, -1.9772291, -0.15444297)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves31" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=549835804]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 1.288054, -2.3472881, -1.8178023)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves32" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=884351696]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, -1.8130803, -1.4221411, 2.069394)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves33" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=822990414]
+transform = Transform3D(0.9459528, 0.2707517, 0.17851333, -0.3143497, 0.9008409, 0.29944956, -0.07973567, -0.33938068, 0.9372636, -2.3351603, 3.042903, 2.7238102)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves34" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=638434429]
+transform = Transform3D(0.62363714, 0, 0.78171396, 0, 1, 2.9802322e-08, -0.781714, 0, 0.6236371, 1.9628959, 3.7701063, -2.6636992)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
+
+[node name="Leaves13" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1353680440]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.20342207, 1.7624073, 0.14768693)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves14" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1628419487]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.48021698, 1.1301479, 1.3166542)
+autosmooth = true
+use_collision = true
+radius = 0.9966639
+material = ExtResource("2_l0ape")
+
+[node name="Leaves15" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=942182679]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.36587858, 0.8954649, -0.90944684)
+autosmooth = true
+use_collision = true
+radius = 1.1585654
+material = ExtResource("2_l0ape")
+
+[node name="Leaves16" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=497637301]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.60165787, 0.082769394, -1.0652922)
+autosmooth = true
+use_collision = true
+radius = 1.2279528
+material = ExtResource("2_l0ape")
+
+[node name="Leaves17" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1276934182]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.7606487, -1.0845594, -0.7854387)
+autosmooth = true
+use_collision = true
+radius = 0.97353923
+material = ExtResource("2_l0ape")
+
+[node name="Leaves18" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1499508841]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.55467844, -1.8296175, 0.25508645)
+autosmooth = true
+use_collision = true
+radius = 0.81163585
+material = ExtResource("2_l0ape")
+
+[node name="Leaves19" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=741126909]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -0.0038952827, -1.0614376, 1.4173092)
+autosmooth = true
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves20" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=1693263190]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.8322625, -0.35599422, 3.2273266)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves21" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=2103485201]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, -1.1253347, -2.6788464, -0.8168549)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 0.9272784
+material = ExtResource("2_l0ape")
+
+[node name="Leaves22" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=2142811030]
+transform = Transform3D(-0.36784247, 0.11340064, -0.92294765, 0.29786807, 0.95460606, -0.0014254451, 0.8808898, -0.27544096, -0.3849231, -1.7073779, 0.23053074, -4.256945)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.466183
+material = ExtResource("2_l0ape")
+
+[node name="Leaves23" type="CSGSphere3D" parent="Branch03/Leaves01" unique_id=750163275]
+transform = Transform3D(0.3827718, -0.05858919, -0.9219833, 0.60961515, 0.76588655, 0.20441893, 0.69415784, -0.6403008, 0.32887655, 0.8880482, 4.988902, 0.061506756)
+autosmooth = true
+operation = 2
+use_collision = true
+radius = 2.6033661
+material = ExtResource("2_l0ape")
