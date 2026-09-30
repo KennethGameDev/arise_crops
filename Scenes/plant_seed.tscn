@@ -27,4 +27,7 @@ shape = SubResource("CapsuleShape3D_11hut")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5406644, 0)
 billboard = 1
+shaded = true
+alpha_cut = 1
+alpha_scissor_threshold = 0.315
 text = "Interact: Gather"

@@ -3,7 +3,8 @@ extends Node3D
 
 
 ## Class vars ##
-# idk yet
+enum PLANT_TYPE {BEANSTALK, FLOWER, BUSH}
+var plant_type: PLANT_TYPE
 
 ## Floating Animation vars ##
 @onready var starting_pos: Vector3 = get_global_position()
@@ -12,6 +13,11 @@ extends Node3D
 @export var rotation_speed: float = 2.0
 var time: float = 0.0
 var wavelength_completed: bool = false
+
+
+func _ready() -> void:
+	GameMaster.seeds.append(self)
+	print(GameMaster.seeds)
 
 
 func _process(delta: float) -> void:
@@ -29,4 +35,4 @@ func _process(delta: float) -> void:
 
 
 func _on_seed_detected_by_player() -> void:
-	pass
+	print("Seed says hi")

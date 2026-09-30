@@ -25,12 +25,6 @@
 [ext_resource type="Script" uid="uid://dx7e7heldjwmg" path="res://addons/proton_scatter/src/scatter_shape.gd" id="23_r0ikl"]
 [ext_resource type="Script" uid="uid://ba7ljvtfgk4cp" path="res://addons/proton_scatter/src/shapes/sphere_shape.gd" id="24_xbk3s"]
 [ext_resource type="Script" uid="uid://devkng6iaf5do" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="25_i4fjy"]
-[ext_resource type="Texture2D" uid="uid://6oa4kulbaeo0" path="res://Assets/World/Terrain/grass_color.png" id="26_hmc15"]
-[ext_resource type="Texture2D" uid="uid://dkqde7euk103a" path="res://Assets/World/Terrain/grass_normal.png" id="27_dt0r1"]
-[ext_resource type="Texture2D" uid="uid://v0sjfk7e7eo2" path="res://Assets/World/Terrain/stone_color.png" id="28_qebug"]
-[ext_resource type="Texture2D" uid="uid://cwqam532of3sx" path="res://Assets/World/Terrain/stone_normal.png" id="29_o2rbt"]
-[ext_resource type="Texture2D" uid="uid://mgl31mgoweb3" path="res://Assets/World/Terrain/sand_color.png" id="30_1vso6"]
-[ext_resource type="Texture2D" uid="uid://4tnfa1r354n8" path="res://Assets/World/Terrain/sand_normal.png" id="31_3ua1v"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_no8kt"]
 shader = ExtResource("1_c5t2i")
@@ -85,8 +79,8 @@ shader_parameter/cirrus_absorption = 2.0
 shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.6548467, 0.6548467)
-shader_parameter/cirrus_position2 = Vector2(0.6548467, 0.6548467)
+shader_parameter/cirrus_position1 = Vector2(0.29813984, 0.29813984)
+shader_parameter/cirrus_position2 = Vector2(0.29813984, 0.29813984)
 shader_parameter/cirrus_texture = ExtResource("2_e0ngr")
 shader_parameter/cumulus_visible = true
 shader_parameter/cumulus_intensity = 0.6
@@ -96,7 +90,7 @@ shader_parameter/cumulus_absorption = 2.0
 shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(23.289557, 23.289557)
+shader_parameter/cumulus_position = Vector2(1.4904801, 1.4904801)
 shader_parameter/cumulus_texture = ExtResource("3_kn0ld")
 shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.042436, 0.412)
 shader_parameter/cumulus_mie_intensity = 1.0
@@ -333,89 +327,6 @@ size = Vector3(35.90751, 4.7629395, 23.129604)
 script = ExtResource("25_i4fjy")
 size = Vector3(35.90751, 4.7629395, 23.129604)
 
-[sub_resource type="Gradient" id="Gradient_i4fjy"]
-offsets = PackedFloat32Array(0.2, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_pt3ps"]
-noise_type = 2
-frequency = 0.03
-cellular_jitter = 3.0
-cellular_return_type = 0
-domain_warp_enabled = true
-domain_warp_type = 1
-domain_warp_amplitude = 50.0
-domain_warp_fractal_type = 2
-domain_warp_fractal_lacunarity = 1.5
-domain_warp_fractal_gain = 1.0
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hmc15"]
-noise = SubResource("FastNoiseLite_pt3ps")
-color_ramp = SubResource("Gradient_i4fjy")
-seamless = true
-
-[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_dt0r1"]
-_shader_parameters = {
-&"bias_distance": null,
-&"blend_sharpness": null,
-&"depth_blur": null,
-&"enable_macro_variation": null,
-&"enable_projection": null,
-&"flat_terrain_normals": null,
-&"macro_variation1": null,
-&"macro_variation2": null,
-&"macro_variation_slope": null,
-&"mipmap_bias": null,
-&"noise1_angle": null,
-&"noise1_offset": null,
-&"noise1_scale": null,
-&"noise2_scale": null,
-&"noise_texture": SubResource("NoiseTexture2D_hmc15"),
-&"projection_threshold": null
-}
-show_region_grid = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qebug"]
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-backlight_enabled = true
-backlight = Color(0.5, 0.5, 0.5, 1)
-distance_fade_mode = 1
-distance_fade_min_distance = 128.0
-distance_fade_max_distance = 96.0
-
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_o2rbt"]
-generated_type = 1
-height_offset = 0.5
-material_override = SubResource("StandardMaterial3D_qebug")
-last_lod = 0
-last_shadow_lod = 0
-lod0_range = 128.0
-
-[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_r0ikl"]
-name = "sand_color"
-albedo_texture = ExtResource("30_1vso6")
-normal_texture = ExtResource("31_3ua1v")
-detiling_rotation = 0.125
-detiling_shift = 0.188
-
-[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_qebug"]
-name = "grass_color"
-id = 1
-albedo_texture = ExtResource("26_hmc15")
-normal_texture = ExtResource("27_dt0r1")
-
-[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_1vso6"]
-name = "stone_color"
-id = 2
-albedo_texture = ExtResource("28_qebug")
-normal_texture = ExtResource("29_o2rbt")
-
-[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_1vso6"]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_o2rbt")])
-texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_r0ikl"), SubResource("Terrain3DTextureAsset_qebug"), SubResource("Terrain3DTextureAsset_1vso6")])
-
 [node name="World" type="Node" unique_id=1108574861]
 
 [node name="Sky3D" type="WorldEnvironment" parent="." unique_id=69457913]
@@ -460,7 +371,6 @@ current_time = 8.94
 day = 23
 
 [node name="Ocean" type="Node3D" parent="." unique_id=323283865]
-visible = false
 
 [node name="Water" type="MeshInstance3D" parent="Ocean" unique_id=10017552]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.55713, 0)
@@ -471,7 +381,6 @@ metadata/_edit_group_ = true
 
 [node name="PlayerHouse" type="Node3D" parent="." unique_id=239717833]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.8667455, 275.26962, 1.4075677)
-visible = false
 
 [node name="CSGBox3D" type="CSGBox3D" parent="PlayerHouse" unique_id=480816444]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.882792, 1.7884521, 2.041179)
@@ -512,11 +421,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8433533, -0.296875, 3.20791
 
 [node name="Trees" type="Node3D" parent="." unique_id=487837368]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.702728, 273.34863, 6.2445555)
-visible = false
 
 [node name="Garden" type="Node3D" parent="." unique_id=502885952]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.49852, 274.02457, -10.279)
-visible = false
 
 [node name="PlotPlatform" type="CSGBox3D" parent="Garden" unique_id=1590156260]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.310421, -1.2470703, 2.3476143)
@@ -576,11 +483,7 @@ material = SubResource("StandardMaterial3D_no8kt")
 [node name="PlantingSpot" parent="Garden/PlotPlatform" unique_id=1535176934 instance=ExtResource("4_k7acu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20991611, 1.476654, 1.1128378)
 
-[node name="PlantSeed" parent="Garden" unique_id=757075991 instance=ExtResource("5_5v1tr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.954789, 2.1644287, -7.262886)
-
 [node name="Islands" type="Node3D" parent="." unique_id=1501726496]
-visible = false
 
 [node name="Ilse01" type="Node3D" parent="Islands" unique_id=443012338]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 145.27226, 0, -99.65017)
@@ -1046,7 +949,6 @@ operation = 2
 size = Vector3(1328.6008, 1023.76355, 1388.3953)
 
 [node name="ScatterNodes" type="Node3D" parent="." unique_id=1165489916]
-visible = false
 
 [node name="Trees" type="Node3D" parent="ScatterNodes" unique_id=587408927]
 
@@ -1160,11 +1062,7 @@ shape = SubResource("Resource_36g3o")
 
 [node name="Rocks" type="Node3D" parent="ScatterNodes" unique_id=545864752]
 
-[node name="Terrain3D" type="Terrain3D" parent="." unique_id=2084970616]
-data_directory = "res://data/world_terrain"
-material = SubResource("Terrain3DMaterial_dt0r1")
-assets = SubResource("Terrain3DAssets_1vso6")
-show_grid = true
-show_region_grid = true
-top_level = true
-metadata/_edit_lock_ = true
+[node name="PlantSeeds" type="Node3D" parent="." unique_id=1397105243]
+
+[node name="PlantSeed" parent="PlantSeeds" unique_id=757075991 instance=ExtResource("5_5v1tr")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.7643657, 276.189, -0.32421112)

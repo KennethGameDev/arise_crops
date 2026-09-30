@@ -5,17 +5,19 @@ var player: PlayerCharacter = null
 var sky: Sky3D = null
 var game_ready: bool = false
 var wake_up_time_hour: float = 7.0
+var seeds: Array[PlantSeed]
 
 
 func _ready() -> void:
 	# Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	pass
-
+	
 
 func _process(_delta: float) -> void:
 	if player and sky and !game_ready:
 		game_ready = true
 		wake_up(wake_up_time_hour)
+
 
 
 func _input(event: InputEvent) -> void:
